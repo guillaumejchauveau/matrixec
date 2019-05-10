@@ -1,7 +1,7 @@
 import test from 'ava'
 import * as matrixec from './lib'
 
-test('should combinate', t => {
+test('should combine', t => {
   /**
    * @type matrixec.ArgMatrix
    */
