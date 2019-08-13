@@ -71,7 +71,7 @@ test('should execute with this undefined', t => {
   t.plan(expectArgs.length * 2)
 
   let count = 0
-  matrixec.execute(matrixec.combine(matrix), function(...args) {
+  matrixec.execute(matrixec.combine(matrix), function (...args) {
     t.is(this, undefined)
     t.deepEqual(args, expectArgs[count])
     count++
@@ -102,7 +102,7 @@ test('should execute with custom this', t => {
   t.plan(expectArgs.length * 2)
 
   let count = 0
-  matrixec.execute(matrix, function(...args) {
+  matrixec.execute(matrix, function (...args) {
     t.is(this, expectArgs[count].shift())
     t.deepEqual(args, expectArgs[count])
     count++

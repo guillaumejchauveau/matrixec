@@ -2,7 +2,7 @@ export type ArgMatrix = Map<any, any[]>
 
 export type Combination = any[]
 
-export function combine(args: ArgMatrix): Combination[] {
+export function combine (args: ArgMatrix): Combination[] {
   const argsStatus: Map<number, number> = new Map()
 
   for (const [argKey, values] of args) {
@@ -43,10 +43,10 @@ export function combine(args: ArgMatrix): Combination[] {
   return combinations
 }
 
-export function execute(
+export function execute (
   args: ArgMatrix | Combination[],
   func: Function,
-  useThisArg=false
+  useThisArg = false
 ): any[] {
   let combinations = args
   if (args instanceof Map) {
